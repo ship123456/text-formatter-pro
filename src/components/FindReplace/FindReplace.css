@@ -1,0 +1,46 @@
+.find-replace {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+}
+.find-replace h3 {
+  margin: 0 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  color: #d6dde7 !important;
+  letter-spacing: 0.5px;
+}
+.find-box {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 12px !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+.find-box input {
+  flex: 2 !important;
+  background-color: #171f2f !important;
+  border: 1px solid #1e293b !important;
+  color: #ffffff !important;
+  padding: 0px 10px !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  height: 36px !important;
+}
+.find-box button {
+  flex: 0.4 !important;
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  font-size: 11px !important;
+  white-space: nowrap !important;
+  height: 36px !important;
+  cursor: pointer !important;
+}
+.find-box button:hover {
+  background-color: #1d4ed8 !important;
+}

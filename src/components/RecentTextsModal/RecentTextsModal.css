@@ -1,0 +1,48 @@
+.recent-modal {
+  padding-left: 35px !important;
+  padding-right: 25px !important;
+}
+.recent-card {
+  width: 100% !important;
+  margin: 0 0 15px 0 !important;
+  background: #101827 !important;
+  border: 1px solid #26364f !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+}
+.recent-card-text {
+  font-size: 12px !important;
+  color: #d5dbea !important;
+  margin: 0 0 8px 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+.recent-card-actions {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.recent-card-actions button {
+  all: unset !important;
+  background: #172033 !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  cursor: pointer !important;
+  color: #b8c2d6 !important;
+}
+.recent-modal .clear-history {
+  all: unset !important;
+  display: block !important;
+  width: max-content !important;
+  margin: 25px auto 0 auto !important;
+  color: #ff3333 !important;
+  font-size: 13px !important;
+  cursor: pointer !important;
+}
+.recent-close-btn:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,66 @@
+.modal .modalChar {
+  width: 500px !important;
+}
+.modal h5 {
+  text-align: center;
+  margin-bottom: 0px;
+}
+.modal .modal-description {
+  font-size: 11px !important;
+  color: rgb(121, 145, 167);
+  margin-left: 5px;
+}
+.modal .limit-close-btn {
+  position: absolute !important;
+  right: 10px;
+  top: 10px;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #ff3333 !important;
+  font-size: 16px !important;
+  cursor: pointer;
+}
+.quick-title {
+  font-size: 14px;
+  color: #b8c2d6;
+  margin-bottom: 10px;
+}
+.limit-options {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-left: 5px;
+  width: 205px;
+  border: 1px solid #26364f;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.limit-options button {
+  width: 90% !important;
+  margin: auto;
+  background: #131a2a !important;
+  border: 0 !important;
+  border-bottom: 1px solid #1e293b !important;
+  text-align: center;
+  padding: 14px 18px;
+  color: white;
+  font-size: 13px;
+}
+.limit-options button.active {
+  background: #cdd1d6 !important;
+}
+.limit-options .save-btn {
+  display: block !important;
+  margin: auto !important;
+  background-color: #0b46eb !important;
+  color: #ffffff !important;
+}
+.save-btn {
+  background-color: rgb(16, 57, 137);
+  padding: 6px;
+  display: block;
+  text-align: center;
+}

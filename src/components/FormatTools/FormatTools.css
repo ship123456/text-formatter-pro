@@ -1,0 +1,41 @@
+.format-tools {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+.format-tools h3 {
+  margin: 0 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  color: #d6dde7 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px;
+}
+.tool-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+.tool-grid button {
+  flex: 1 !important;
+  background: #060b13 !important;
+  border: 1px solid #1e293b !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 10px 8px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+}
+.tool-grid button:hover {
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+  background: #0f172a !important;
+}

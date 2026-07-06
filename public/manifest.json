@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Text Formatter Pro",
+  "version": "1.0.0",
+  "description": "A browser-based text formatting extension for formatting, cleaning, analyzing, and managing text.",
+  "action": {
+    "default_title": "Text Formatter Pro",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon16.jpeg",
+      "48": "icons/icon48.jpeg",
+      "128": "icons/icon128.jpeg"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.jpeg",
+    "48": "icons/icon48.jpeg",
+    "128": "icons/icon128.jpeg"
+  },
+  "permissions": ["storage"]
+}

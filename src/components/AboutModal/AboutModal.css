@@ -1,0 +1,127 @@
+.about-modal {
+  width: 420px !important;
+  padding: 24px !important;
+  background: #060b13 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 12px !important;
+  color: white !important;
+}
+.about-content {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+.about-left {
+  width: 120px;
+  text-align: center;
+}
+.about-left h3 {
+  font-size: 13px;
+  margin: 12px 0 6px;
+}
+.about-icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  border-radius: 16px;
+  font-size: 38px;
+}
+.about-modal h2 {
+  font-size: 18px !important;
+  margin-bottom: 20px !important;
+}
+.about-modal p {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+}
+.about-modal button {
+  width: auto !important;
+  padding: 8px 18px !important;
+  font-size: 13px !important;
+}
+.about-version {
+  display: inline-block;
+  margin-top: 12px;
+  background: #1e293b;
+  padding: 3px 3px;
+  border-radius: 20px;
+  color: #3b82f6;
+  font-size: 10px;
+}
+.about-info p {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+}
+.about-info h5 {
+  margin-bottom: 0px !important;
+}
+.about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+.about-info h5 {
+  margin: 0 0 4px 0 !important;
+  padding: 0 !important;
+}
+.about-info ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+.about-info li {
+  margin: 0 0 6px 0 !important;
+  text-align: left !important;
+  font-size: 12px !important;
+  padding: 0 !important;
+  color: #94a3b8 !important;
+}
+.about-info {
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+.built-text {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #1e293b;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #a7b4c2;
+}
+.about-footer span {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #a7b4c2;
+  display: flex;
+  justify-content: center;
+}
+.check {
+  color: #22c55e;
+  margin-right: 6px;
+  font-weight: bold;
+}
+.about-modal .about-close {
+  position: absolute !important;
+  top: 12px !important;
+  right: 12px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #ef4444 !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  padding: 0 !important;
+}

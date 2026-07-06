@@ -1,0 +1,14 @@
+.other-tools {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+}
+.other-tools h3 {
+  margin: 0 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  color: #d6dde7 !important;
+  letter-spacing: 0.5px;
+}

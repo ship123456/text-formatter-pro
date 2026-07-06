@@ -1,0 +1,67 @@
+.action-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 10px !important;
+  width: 100% !important;
+  margin-top: 4px !important;
+}
+.action-buttons button {
+  margin-top: 7px;
+  margin-bottom: 10px;
+  flex: 1 !important;
+  height: 35px !important;
+  padding: 5px 14px !important;
+  border-radius: 5px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+.action-buttons button:first-of-type {
+  flex: 1 !important;
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+.action-buttons button:first-of-type:hover {
+  background-color: #1d4ed8 !important;
+}
+.action-buttons button:not(:first-of-type) {
+  flex: 1 !important;
+  background-color: #060b13 !important;
+  border: 1px solid #1e293b !important;
+  color: #e3e7ec !important;
+}
+.notification.copy {
+  position: absolute;
+  bottom: 60px;
+  transform: translateX(-50%);
+  background: #22c55e;
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+.notification.download {
+  position: absolute;
+  bottom: 60px;
+  transform: translateX(-50%);
+  background: #22c55e;
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  right: -80px;
+}
+.delete-icon {
+  color: #ef4444 !important;
+  font-size: 14px;
+  font-weight: 800;
+}
+.action-buttons button:hover {
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+  background: #0f172a !important;
+}

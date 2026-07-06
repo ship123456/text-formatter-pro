@@ -1,0 +1,29 @@
+.text-editor {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+.text-editor textarea {
+  width: 100% !important;
+  min-height: 180px !important;
+  background-color: #060b13 !important;
+  height: 180px !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  resize: none !important;
+  outline: none !important;
+}
+.text-editor textarea::placeholder {
+  color: #475569 !important;
+}
+.editor-footer {
+  display: flex !important;
+  justify-content: flex-end !important;
+  margin-top: 6px !important;
+  color: #64748b !important;
+  font-size: 12px !important;
+}
