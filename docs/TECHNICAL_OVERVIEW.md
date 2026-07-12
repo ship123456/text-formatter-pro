@@ -88,14 +88,17 @@ The React application is loaded inside the extension environment and communicate
 
 ## Manifest V3 Configuration
 
-Manifest V3 manages:
+The `manifest.json` file is the core configuration file of the Chrome extension. It defines the extension's metadata, permissions, entry points, and browser integration settings.
 
-- Extension information
-- Required permissions
-- Extension entry files
-- Browser integration
+It manages:
 
-The extension follows Chrome's current extension architecture standards.
+- **Manifest Version (V3):** Specifies the extension format supported by modern Chromium-based browsers.
+- **Extension Information:** Defines the extension name, version, and description.
+- **Action Configuration:** Registers the popup interface displayed when the extension icon is clicked.
+- **Permissions:** Requests the `storage` permission to persist editor text, recent history, auto-save status, and user preferences.
+- **Icons:** Specifies the extension icons displayed in the Chrome toolbar and Extensions page.
+
+The `manifest.json` file serves as the entry point for the extension and allows Chrome to correctly load, configure, and manage the application.
 
 ## Application Workflow
 
