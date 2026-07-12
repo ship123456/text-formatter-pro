@@ -93,8 +93,8 @@ The goal of the project is to deliver a fast, privacy-focused, and easy-to-use t
   - Enable or disable auto-save
   - Automatically restore saved text
   - Character limit customization
-  - Recent Texts customaization
-  - Remembers the text as well
+  - Recent Texts customization
+  - Restores the previously saved editor content automatically.
 
 ## Technology Stack
 
