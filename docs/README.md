@@ -127,8 +127,9 @@ Text Formatter Pro stores user preferences and recent text history using Chrome 
 Stored data includes:
 
 - Recent text entries
-- Auto-save preferences
-- Character limit settings
+- Auto-save preferences(on/off)
+- Character limit
+- Editor text
 
 All data remains stored locally in the browser.
 
@@ -221,6 +222,11 @@ Used for:
 - Auto-save functionality
 - Character limit settings
 
+### Clipboard Permission
+
+- Reading text from the clipboard for the Paste feature
+- Writing formatted text to the clipboard for the Copy feature
+
 No personal data is collected or sent externally.
 
 ## Project Structure
@@ -282,16 +288,17 @@ Additional documentation is available for setup, usage, architecture, and mainte
 
 ## Known Limitations
 
-- Available as a Chrome-based browser extension
-- Text data and preferences are stored locally in the browser
-- Requires Chrome Extension APIs for full functionality
+- Currently supports Chromium-based browsers only.
+- Requires browser permissions for storage and clipboard features.
+- Works only as a browser extension (no standalone desktop/mobile version).
+- Offline processing only; no cloud synchronization.
 
 ## Future Enhancements
 
 - Support for additional export formats
 - Advanced formatting options
 - Keyboard shortcut support
-- Additional browser compatibility testing
+- Custom themes
 - Optional cloud synchronization
 
 ## License
