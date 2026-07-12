@@ -14,7 +14,6 @@ The extension combines common text utilities such as case conversion, cleanup op
 - [Technology Stack](#technology-stack)
 - [Architecture Overview](#architecture-overview)
 - [Workflow](#workflow)
-- [Core Functionality](#core-functionality)
 - [Data Storage](#data-storage)
 - [Target Users](#target-users)
 - [Quick Start](#quick-start)
@@ -133,18 +132,6 @@ Users can:
 5. Copy or download processed output.
 
 All processing happens locally inside the browser.
-
-## Core Functionality
-
-Text Formatter Pro includes:
-
-- Text processing engine for formatting operations
-- Real-time content analysis
-- Browser-based local persistence
-- Clipboard interaction support
-- File export functionality
-- User preference management
-- Modular component-based UI structure
 
 ## Data Storage
 
