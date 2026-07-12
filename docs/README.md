@@ -13,7 +13,6 @@ The extension combines common text utilities such as case conversion, cleanup op
 - [Key Features](#key-features)
 - [Technology Stack](#technology-stack)
 - [Architecture Overview](#architecture-overview)
-- [Workflow](#workflow)
 - [Data Storage](#data-storage)
 - [Target Users](#target-users)
 - [Quick Start](#quick-start)
@@ -120,18 +119,6 @@ Text Formatter Pro follows a modular React architecture.
 - Chrome Storage API manages persistence
 
 This separation keeps formatting logic, storage handling, and user interface code maintainable.
-
-## Workflow
-
-Users can:
-
-1. Enter or paste text into the editor.
-2. Apply formatting or cleanup operations.
-3. Analyze text statistics instantly.
-4. Store and restore recent text entries.
-5. Copy or download processed output.
-
-All processing happens locally inside the browser.
 
 ## Data Storage
 
