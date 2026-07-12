@@ -31,12 +31,12 @@ const getData = (keys, callback) => {
 };
 export function TextProvider({ children }) {
   const [text, setText] = useState("");
-  const [title, setTitle] = useState("");
   const [history, setHistory] = useState([]);
   const [charLimit, setCharLimit] = useState(5000);
   const [autoSave, setAutoSave] = useState(true);
   const [recentTexts, setRecentTexts] = useState([]);
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   /* LOAD */
   useEffect(() => {
     getData(["savedText", "autoSave", "recentTexts", "charLimit"], (data) => {
@@ -74,6 +74,7 @@ export function TextProvider({ children }) {
   }, [charLimit, autoSave]);
   function updateText(value) {
     if (value.length <= charLimit) {
+      setError(""); 
       setHistory((prev) => [...prev, text]);
       setText(value);
     }
@@ -104,10 +105,6 @@ export function TextProvider({ children }) {
     if (!text.trim()) return;
     const updated = [text, ...recentTexts].slice(0, 5);
     setRecentTexts(updated);
-    setMessage("Saved ✓");
-    setTimeout(() => {
-      setMessage("");
-    }, 2000);
   }
   function restoreRecent(oldText) {
     const newText = text + "\n" + oldText;
@@ -125,22 +122,24 @@ export function TextProvider({ children }) {
     setRecentTexts([]);
     setCharLimit(5000);
     setAutoSave(true);
-    setMessage("Reset Complete ✓");
-    setTimeout(() => {
-      setMessage("");
-    }, 2000);
     if (hasChromeStorage()) {
       chrome.storage.local.clear();
     } else {
       localStorage.clear();
     }
   }
+  const validateText = () => {
+  if (!text.trim()) {
+    setError("Please enter some text first.");
+    return false;
+  }
+  setError("");
+  return true;
+ };
   return (
     <TextContext.Provider
       value={{
         text,
-        title,
-        setTitle,
         updateText,
         charLimit,
         setCharLimit,
@@ -154,6 +153,7 @@ export function TextProvider({ children }) {
         deleteRecent,
         clearRecent,
         resetPreferences,
+        validateText,error
       }}
     >
       {children}

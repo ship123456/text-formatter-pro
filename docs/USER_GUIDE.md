@@ -2,8 +2,6 @@
 
 This user guide explains how to use Text Formatter Pro features, including text formatting, cleanup tools, history management, preferences, and productivity options.
 
-Text Formatter Pro is designed to provide quick browser-based text editing tools through a simple Chrome Extension interface.
-
 ## Table of Contents
 
 - [Version Information](#version-information)
@@ -77,7 +75,7 @@ All text operations are performed locally inside the browser.
 | Cleanup Tools | Removes unwanted formatting issues |
 | Find & Replace | Searches and updates text values |
 | Statistics Panel | Displays live text information |
-| Menu Options | Provides history, about, and app controls |
+| Menu Options | Provides history, about, and resetText history and paste options, undo, auto save, charater limit |
 
 ## Main Text Workspace
 
@@ -195,7 +193,7 @@ Users can:
 - Turn Auto Save ON
 - Turn Auto Save OFF
 
-When enabled, saved text is restored automatically.
+When enabled, saved text is restored automatically. It also tracks recent texts history, character limit. 
 
 ## Managing Text History
 
@@ -217,19 +215,9 @@ Users can customize the maximum text length allowed inside the editor.
 
 This helps control the amount of text processed inside the extension.
 
-## Managing App Preferences
-
-User preferences include:
-
-- Auto Save settings
-- Character limit configuration
-- Recent text storage
-
-Preferences are stored locally.
-
 ## Resetting Preferences
 
-Reset Preferences restores default application settings.
+Reset Preferences restores default application settings using Reset All
 
 This action restores user settings back to their default values.
 
@@ -262,8 +250,7 @@ Examples:
 
 - Confirmation after copying text
 - Confirmation after downloading text
-- Validation for character limits
-- Empty text handling when required
+- Empty text handling when required on text in textArea
 
 These messages help users understand the result of their actions.
 

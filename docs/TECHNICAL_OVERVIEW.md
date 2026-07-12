@@ -40,8 +40,6 @@ This document explains the technical implementation, technologies, browser APIs,
 - [Technical Limitations](#technical-limitations)
 - [Future Technical Improvements](#future-technical-improvements)
 
----
-
 ## Version Information
 
 **Application:** Text Formatter Pro  
@@ -49,15 +47,11 @@ This document explains the technical implementation, technologies, browser APIs,
 **Platform:** Chrome Extension  
 **Manifest Version:** Manifest V3
 
----
-
 ## Overview
 
-Text Formatter Pro is a React-based Chrome Extension that provides browser-based text formatting and productivity utilities.
+Text Formatter Pro is built using a modular React architecture with separate layers for UI components, state management, text processing, and browser integration.
 
-The application uses a modular frontend structure with reusable components, centralized state management, browser storage integration, and independent text processing utilities.
-
----
+The application uses React Context API, utility functions, and Chrome Extension APIs to keep functionality organized and maintainable.
 
 ## Technical Requirements
 
@@ -75,8 +69,6 @@ Development requirements:
 - JavaScript
 - Chrome Extension APIs
 
----
-
 ## Technology Stack
 
 | Technology | Purpose |
@@ -88,15 +80,11 @@ Development requirements:
 | Manifest V3 | Chrome Extension configuration |
 | Chrome Storage API | Browser data persistence |
 
----
-
 ## Chrome Extension Overview
 
 Text Formatter Pro runs as a browser extension popup.
 
 The React application is loaded inside the extension environment and communicates with supported Chrome APIs for browser functionality.
-
----
 
 ## Manifest V3 Configuration
 
@@ -109,27 +97,29 @@ Manifest V3 manages:
 
 The extension follows Chrome's current extension architecture standards.
 
----
-
 ## Application Workflow
 
-```text
-User Input
-    |
-    v
-React Components
-    |
-    v
-Context State
-    |
-    v
-Processing Logic
-    |
-    v
-Updated Interface
 ```
-
----
+User Input / Action
+        |
+        v
+React Component
+        |
+        v
+Local State / Context State
+        |
+        v
+Utility Functions / Event Handlers
+        |
+        v
+Updated Text / UI State
+        |
+        v
+Chrome Storage Bridge
+        |
+        v
+Stored Data / Restored Data repace diagram
+```
 
 ## React Implementation Overview
 
@@ -142,39 +132,27 @@ React manages:
 
 The application uses functional components with React Hooks.
 
----
-
 ## Component Implementation
 
-Components are responsible for:
+Components are separated based on their responsibilities.
 
-- Rendering interface sections
-- Handling user actions
-- Displaying updated information
+Each component manages a specific part of the extension such as text editing, formatting actions, statistics display, menus, and modal windows.
 
-Reusable components improve maintainability.
-
----
+This modular structure keeps the interface organized and easier to maintain.
 
 ## State Management
 
-Application state includes:
+The application uses a combination of component state and React Context API.
 
-- Current text
-- Recent history
-- Auto Save status
-- Character limit
-- User messages
+Local state manages component-specific data, while Context API manages shared data such as text content, recent history, auto-save status, and character limit.
+This keeps data flow organized across different components.
 
----
 
 ## Context API Implementation
 
 React Context API provides centralized state access.
 
 It avoids passing data manually through multiple component levels.
-
----
 
 ## Input Handling & Event Flow
 
@@ -184,55 +162,28 @@ Flow:
 User Action
      |
      v
-Event Handler
+Component Event Handler
      |
      v
-State Update
+Local State / Context Update
      |
      v
-Component Refresh
+Text Processing or Storage Logic
+     |
+     v
+Updated UI
 ```
 
----
+## Text Processing Implementation
 
-## Text Processing Engine
+The text processing engine handles multiple formatting and analysis operations.
 
-Text operations are separated into utility functions.
+Supported operations include:
 
-This keeps processing logic independent from UI components.
-
----
-
-## Text Formatting Implementation
-
-Supported operations:
-
-- Uppercase conversion
-- Lowercase conversion
-- Capitalization
-
----
-
-## Text Cleaning Implementation
-
-Supported cleanup:
-
-- Extra space removal
-- Duplicate line removal
-- Blank line trimming
-- Line sorting
-
----
-
-## Find & Replace Implementation
-
-Find and Replace:
-
-- Searches matching text
-- Processes replacement value
-- Updates editor content
-
----
+- Case conversion (uppercase, lowercase, capitalization)
+- Text cleanup (extra spaces, duplicate lines, blank lines, sorting)
+- Find and replace functionality
+- Text statistics calculation including characters, words, lines, and reading time
 
 ## Text Statistics Processing
 
@@ -243,66 +194,35 @@ Statistics calculated:
 - Lines
 - Reading time estimation
 
----
-
 ## Chrome Storage & Data Persistence
 
-Chrome Storage API stores:
+Chrome Storage API stores extension data locally inside the browser.
 
-- User preferences
+Stored data includes:
+
 - Recent text history
-- Auto Save data
+- Auto-save status
+- Character limit settings
+- Saved editor text
 
-Storage remains inside the browser.
-
----
-
-## Auto Save Implementation
-
-Auto Save automatically stores active text when enabled.
-
-Stored text can be restored when reopening the extension.
-
----
+This allows data to persist even after closing and reopening the extension.
 
 ## Recent Text History Implementation
 
-Recent history allows:
+Recent history stores previously used text entries using Chrome Storage API.
 
-- Saving previous entries
-- Restoring old text
-- Removing stored items
-
----
-
-## User Preferences Management
-
-Preferences include:
-
-- Auto Save configuration
-- Character limit settings
-
-Preferences persist using browser storage.
-
----
+Users can restore saved entries, remove individual items, or clear the complete history
 
 ## Character Limit Handling
 
-Character limits help control maximum text input size.
+Character limit functionality controls the maximum allowed text length in the editor.
 
-Validation prevents exceeding configured limits.
-
----
+The selected limit is managed through application state and stored using Chrome Storage API for persistence.
 
 ## Modal & Menu Management
 
-Menus and modals manage secondary features:
-
-- Recent Texts
-- Settings
-- About information
-
----
+Menu and modal components handle additional extension features.
+The active modal state controls which section is displayed, such as recent texts, character limit settings, and application information.
 
 ## Clipboard Integration
 
@@ -313,13 +233,9 @@ Clipboard functionality supports:
 
 Actions occur through user interaction.
 
----
-
 ## Text Export Handling
 
 Text content can be exported as a `.txt` file using browser-based file generation.
-
----
 
 ## Browser Permissions
 
@@ -329,10 +245,10 @@ Required permission:
 
 Used for:
 
-- Saving preferences
-- Maintaining history
-
----
+- Saving editor text
+- Maintaining recent text history
+- Storing auto-save data
+- Saving character limit settings
 
 ## Browser API Usage
 
@@ -340,21 +256,19 @@ Text Formatter Pro uses browser APIs to support extension functionality.
 
 Used APIs:
 
-- Chrome Storage API for saving preferences and history
+- Chrome Storage API for saving editor text, recent history, auto-save data, and character limit settings
 - Clipboard API for copy and paste actions
-- Browser download functionality for text export
+- Browser download functionality for text files
 
-All browser API interactions happen after user actions or application state updates.
+Browser API interactions occur based on user actions and application state updates.
 
 ## Privacy & Local Data Handling
 
-Text Formatter Pro follows local-first processing.
+Text Formatter Pro follows a local-first approach.
 
-- Text processing happens inside browser
-- No external processing servers required
-- User controls stored data
+Text processing happens inside the browser without external servers.
+Extension data is stored locally using the browser storage system.
 
----
 
 ## Cross-Browser Compatibility
 
@@ -364,28 +278,17 @@ Supported:
 - Microsoft Edge
 - Brave
 
----
-
 ## Error Handling
 
-Handled through:
+The application includes input validation to prevent invalid operations.
 
-- Input validation
-- User feedback messages
-- Safe default behavior
-
----
+Validation is applied for text input
 
 ## Performance Considerations
 
-Implemented using:
+The application uses modular components, reusable utility functions, and local text processing to keep operations efficient.
 
-- Lightweight components
-- Local processing
-- Reusable functions
-- Controlled storage usage
-
----
+Browser storage usage is limited to required extension data.
 
 ## Code Organization
 
@@ -404,10 +307,8 @@ Vite handles:
 
 - Development server
 - Production build generation
-- Optimized extension files
-
----
-
+- Bundling React application files for the   
+  Chrome Extension
 
 
 ## Technical Limitations
@@ -416,8 +317,6 @@ Current limitations:
 
 - Requires Chrome Extension API support
 - Local data depends on browser storage availability
-
----
 
 ## Future Technical Improvements
 

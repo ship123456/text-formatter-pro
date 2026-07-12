@@ -69,7 +69,7 @@ The goal of the project is to deliver a fast, privacy-focused, and easy-to-use t
 
 - Convert text to uppercase
 - Convert text to lowercase
-- Capitalize words and sentences
+- Capitalize words 
 - Remove extra spaces
 - Remove duplicate lines
 - Trim blank lines
@@ -94,11 +94,9 @@ The goal of the project is to deliver a fast, privacy-focused, and easy-to-use t
 - Auto-save functionality
   - Enable or disable auto-save
   - Automatically restore saved text
-
-- Character limit customization
-- Undo last text change
-- Reset user preferences
-- About section with application details
+  - Character limit customization
+  - Recent Texts customaization
+  - Remembers the text as well
 
 ## Technology Stack
 
@@ -157,7 +155,6 @@ Stored data includes:
 - Recent text entries
 - Auto-save preferences
 - Character limit settings
-- User configuration
 
 All data remains stored locally in the browser.
 
@@ -228,7 +225,7 @@ The extension will now be available in Chrome.
 4. Review text statistics.
 5. Copy or download the final text.
 
-Additional tools are available from the menu including recent texts, auto-save, and preferences.
+Additional tools are available from the menu including recent texts, auto-save.
 
 ## Browser Compatibility
 
@@ -247,7 +244,6 @@ The extension uses:
 Used for:
 
 - Saving recent texts
-- Maintaining user preferences
 - Auto-save functionality
 - Character limit settings
 

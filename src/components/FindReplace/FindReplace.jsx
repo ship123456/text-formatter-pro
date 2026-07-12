@@ -2,12 +2,14 @@ import { useContext, useState } from "react";
 import { TextContext } from "../../context/TextContext";
 import "./FindReplace.css";
 function FindReplace() {
-  const { text, updateText, saveToRecent } = useContext(TextContext);
+  const { text, updateText, saveToRecent, validateText, setError } =
+    useContext(TextContext);
   const [find, setFind] = useState("");
   const [replace, setReplace] = useState("");
   function replaceAll() {
+    if (!validateText()) return;
     if (!find.trim()) {
-      alert("Enter text to find");
+      setError("Please enter text to find.");
       return;
     }
     saveToRecent();
@@ -23,7 +25,10 @@ function FindReplace() {
       <div className="find-box">
         <input
           value={find}
-          onChange={(e) => setFind(e.target.value)}
+          onChange={(e) => {
+            setFind(e.target.value);
+            setError("");
+          }}
           placeholder="Find"
         />
         <input
@@ -33,6 +38,7 @@ function FindReplace() {
         />
         <button onClick={replaceAll}>Replace</button>
       </div>
+      {/* {error && <span className="error-message">{error}</span>} */}
     </section>
   );
 }

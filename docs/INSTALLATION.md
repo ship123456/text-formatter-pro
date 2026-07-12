@@ -64,8 +64,6 @@ Verify npm installation:
 npm --version
 ```
 
-If both commands return version numbers, the environment is ready.
-
 ## Clone Repository
 
 Clone the project repository:
@@ -219,7 +217,6 @@ Check:
 - Correct build folder is selected
 - Browser supports extensions
 - Developer Mode is enabled
-- Latest build files are generated
 
 For more details:
 

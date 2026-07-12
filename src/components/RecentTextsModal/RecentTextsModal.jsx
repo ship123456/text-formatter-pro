@@ -36,8 +36,8 @@ function RecentTextsModal({ closeModal }) {
                 style={{ fontSize: "12px" }}
                 title={item}
               >
-                {item.slice(0, 25)}
-                {item.length > 25 ? "..." : ""}
+                {item.slice(0, 5)}
+                {item.length > 5 ? "..." : ""}
               </p>
               <div className="recent-card-actions">
                 <button onClick={() => restoreRecent(item)}>↩ Restore</button>

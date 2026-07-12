@@ -6,10 +6,6 @@ function CharacterLimitModal({ closeModal }) {
   const [limit, setLimit] = useState(charLimit);
   const [message, setMessage] = useState("");
   function saveLimit() {
-    if (limit <= 0) {
-      setMessage("Invalid limit");
-      return;
-    }
     setCharLimit(Number(limit));
     setMessage("Saved");
     setTimeout(() => {

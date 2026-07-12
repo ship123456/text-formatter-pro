@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TextContext } from "../../context/TextContext";
+import { pasteText } from "../../utils/fileUtils";
 import "./MenuDropdown.css";
 function MenuDropdown({ setActiveModal }) {
   const {
@@ -10,15 +11,13 @@ function MenuDropdown({ setActiveModal }) {
     resetPreferences,
     text,
   } = useContext(TextContext);
-  async function pasteText() {
-    const clipboardText = await navigator.clipboard.readText();
-    updateText(text + "\n" + clipboardText);
-  }
   return (
     <>
       <div className="menu-dropdown">
         <button onClick={undoLastChange}>↩ Undo Last Change</button>
-        <button onClick={pasteText}>📋 Paste Text</button>
+        <button onClick={() => pasteText(text, updateText)}>
+          📋 Paste Text
+        </button>
         <button onClick={toggleAutoSave}>
           💾 Auto Save {autoSave ? "ON" : "OFF"}
         </button>

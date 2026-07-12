@@ -41,7 +41,7 @@ Version 1.0.0 includes:
 - Initial Chrome Extension release
 - Complete text formatting feature set
 - Local storage support
-- User preference management
+- User preference management (Auto Save on/off)
 - Browser-based text processing
 
 ## Versioning Strategy
@@ -82,10 +82,12 @@ Version meaning:
 
 Added:
 
+- README documentation
 - Installation guide
 - User guide
+- Technical overview
+- Architecture documentation
 - Troubleshooting guide
-- Technical documentation
 - Privacy documentation
 - Release notes
 
@@ -165,7 +167,6 @@ Added:
 - Organized feature menu
 - Local Chrome Storage integration
 - Responsive popup layout
-- User feedback messages
 - Modular React component structure
 
 ### Bug Fixes

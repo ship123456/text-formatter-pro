@@ -117,66 +117,20 @@ input:focus {
   background-color: rgba(59, 130, 246, 0.1);
   color: #3b82f6 !important;
 }
-/* RESPONSIVE FLUID FIX */
-@media (max-width: 768px) {
-  .app {
-    margin: 0;
-    border-radius: 0;
-    border: none;
-    width: 100%;
-  }
+.error-message {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 2px 2px;
+  border-radius: 6px;
+  background-color: #fdecea;
+  color: #d32f2f;
+  font-size: 10px;
 }
-/* Force the background color on everything to break through component caches */
-body,
-html,
-#root,
-.app {
-  background-color: #0d1527 !important;
-  color: #f3f4f6 !important;
+.editor-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
 }
-/* Global input fields theme injection */
-textarea,
-input {
-  background-color: #060b13 !important;
-  color: #f3f4f6 !important;
-  border: 1px solid #1e293b !important;
-}
-/* Global button baseline overrides */
-button {
-  background-color: #0d1527 !important;
-  color: #94a3b8 !important;
-  border: 1px solid #1e293b !important;
-}
-/* Highlighted active state styles */
-button:hover,
-button[active="true"] {
-  border-color: #3b82f6 !important;
-  color: #3b82f6 !important;
-  background-color: rgba(59, 130, 246, 0.1) !important;
-}
-/* make popups float */
-.recent-modal,
-.modalChar,
-.about-card {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 10000 !important;
-}
-/* all popup modals */
-.modal,
-.about-card {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 10000 !important;
-}
-.about-modal {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 10000 !important;
-}
+
+

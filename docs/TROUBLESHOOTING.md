@@ -113,7 +113,7 @@ chrome://extensions/
 ```
 
 2. Enable Developer Mode.
-3. Select the correct build folder.
+3. Select the generated dist folder.
 4. Reload extension.
 
 ## Feature-Specific Issues
@@ -219,7 +219,10 @@ Applies to:
 
 #### Undo does not restore text
 
-Undo restores the previous available text state.
+A previous text change exists
+
+Formatting or editing action was performed before using Undo
+Undo restores the last available text state.
 
 #### Auto Save does not restore content
 
@@ -231,8 +234,6 @@ Check:
 ### Text History Issues
 
 #### Data Recovery
-
-Text Formatter Pro stores user settings and recent text data using Chrome Storage.
 
 If browser storage is cleared:
 
@@ -267,6 +268,7 @@ Stored information includes:
 - Auto Save preference
 - Recent text history
 - Character limit settings
+- Text in text editor
 
 If issues occur:
 
@@ -314,7 +316,7 @@ chrome://extensions/
 Steps:
 
 1. Open extension menu.
-2. Select Reset Preferences.
+2. Select Reset Preferences(Auto save on/off)
 3. Restart extension.
 
 ## Known Issues & Workarounds

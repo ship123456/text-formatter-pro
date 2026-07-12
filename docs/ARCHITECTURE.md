@@ -7,6 +7,8 @@ This document explains the internal architecture, application structure, data fl
 - [Version Information](#version-information)
 - [Overview](#overview)
 - [Architectural Overview](#architectural-overview)
+- [Auto Save Workflow](#auto-save-workflow)
+- [State Management](#state-management)
 - [Architecture Goals](#architecture-goals)
 - [Application Lifecycle](#application-lifecycle)
 - [High-Level Architecture](#high-level-architecture)
@@ -51,9 +53,13 @@ This document explains the internal architecture, application structure, data fl
 
 ## Overview
 
-Text Formatter Pro is a React-based Chrome Extension built with a modular architecture.
+Text Formatter Pro follows a modular React-based Chrome Extension architecture designed with separation of responsibilities.
+The application is divided into reusable components where each component manages a specific part of the interface such as the editor, formatting controls, statistics panel, action buttons, and menu options.
+Application-wide data is managed using React Context API, allowing shared state such as text content, character limits, auto-save status, and recent text history to be accessed across components.
+Custom hooks handle reusable application logic, while utility functions manage text formatting and transformation operations.
+Chrome Storage API is used as the persistence layer to store text data, auto-save settings, character limits, and recent history locally inside the browser.
+The overall flow separates UI rendering, state management, business logic, and browser storage integration, making the extension easier to maintain and extend.
 
-The application separates user interface components, shared state management, text processing logic, and browser storage handling to improve maintainability.
 
 ## Architectural Overview
 
@@ -87,6 +93,16 @@ Chrome Storage API
  v
 Browser Local Storage
 ```
+## State Management
+
+Text Formatter Pro uses React Context API to manage shared application state across components.
+The context handles text content, character limits, auto-save status, and recent text history.
+Components access and update shared data through centralized state functions, keeping the application structure clean and data flow consistent.krde
+
+## Auto Save Workflow
+
+Text Formatter Pro uses Chrome Storage API to support optional auto-save functionality.
+When enabled, text data, recent history, character limits, and auto-save status are stored locally and restored when the extension is reopened.
 
 ## Architecture Goals
 
@@ -206,8 +222,12 @@ Contains reusable interface sections.
 
 Examples:
 
-- Buttons
-- Toggle
+- Header
+- Editor
+- FormatTools
+- StatsPanel
+- ActionButtons
+- MenuDropdown
 - Modals
 
 ### context
@@ -218,7 +238,9 @@ Responsible for:
 
 - Text state
 - History state
-- Preferences
+- Preferences(Auto on and off) 
+- Charcacter limit 
+
 
 ### hooks
 
@@ -380,7 +402,7 @@ Chrome Storage API provides browser-based persistence.
 
 Used for:
 
-- Saving settings
+- Saving preferences
 - Restoring data after reopening extension
 
 ## Build Architecture
@@ -447,14 +469,15 @@ Preferences include:
 
 - Auto Save configuration
 - Character limit settings
-- User options
+- Recent history Input 
+- Text in editor 
 
 ## Modal & Menu Architecture
 
 Menus and modals provide access to secondary features:
 
 - Recent texts
-- Settings
+- Character Limit 
 - About information
 
 ## Clipboard Flow

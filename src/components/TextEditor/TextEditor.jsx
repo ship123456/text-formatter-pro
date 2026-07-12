@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { TextContext } from "../../context/TextContext";
 import "./TextEditor.css";
 function TextEditor() {
-  const { text, updateText, charLimit } = useContext(TextContext);
+  const { text, updateText, charLimit, error } = useContext(TextContext);
   return (
     <section className="text-editor">
       <textarea
@@ -12,7 +12,8 @@ function TextEditor() {
         placeholder="Enter or paste your text here..."
       />
       <div className="editor-footer">
-        <span>
+        {error && <p className="error-message">{error}</p>}
+        <span className="char-count">
           {text.length} / {charLimit} characters
         </span>
       </div>
@@ -20,12 +21,3 @@ function TextEditor() {
   );
 }
 export default TextEditor;
-export function removeDuplicateLines(text) {
-  return [...new Set(text.split("\n"))].join("\n");
-}
-export function trimBlankLines(text) {
-  return text
-    .split("\n")
-    .filter((line) => line.trim() !== "")
-    .join("\n");
-}

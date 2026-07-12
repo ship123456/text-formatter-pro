@@ -7,3 +7,8 @@ export function downloadTextFile(text) {
   link.click();
   URL.revokeObjectURL(url);
 }
+
+export async function pasteText(text, updateText) {
+  const clipboardText = await navigator.clipboard.readText();
+  updateText(text + "\n" + clipboardText);
+}

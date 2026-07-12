@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Header from "./components/Header/Header.jsx";
 import TextEditor from "./components/TextEditor/TextEditor.jsx";
 import FormatTools from "./components/FormatTools/FormatTools.jsx";
@@ -10,6 +10,7 @@ import AboutModal from "./components/AboutModal/AboutModal";
 import RecentTextsModal from "./components/RecentTextsModal/RecentTextsModal";
 import CharacterLimitModal from "./components/CharacterLimitModal/CharacterLimitModal";
 import StatsPanel from "./components/StatsPanel/StatsPanel.jsx";
+import { TextContext } from "./context/TextContext";
 function App() {
   const [activeModal, setActiveModal] = useState(null);
   return (

@@ -22,8 +22,13 @@
 }
 .editor-footer {
   display: flex !important;
-  justify-content: flex-end !important;
+  justify-content: space-between !important;
   margin-top: 6px !important;
   color: #64748b !important;
   font-size: 12px !important;
+}
+.char-count {
+  margin-left: auto;
+  color: #64748b;
+  font-size: 12px;
 }

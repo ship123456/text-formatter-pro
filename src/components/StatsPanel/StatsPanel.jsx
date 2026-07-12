@@ -19,7 +19,7 @@ function StatsPanel() {
       </div>
       <div className="stat-card">
         <span className="stat-icon sentence-icon">☷</span>
-        <p>Sentences</p>
+        <p>Lines</p>
         <div>{stats.sentences}</div>
       </div>
       <div className="stat-card">

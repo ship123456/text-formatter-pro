@@ -34,7 +34,7 @@ function AboutModal({ closeModal }) {
       </div>
       <div className="about-footer">
         <div className="built-text">Built with ❤️ using React</div>
-        <span>© 2025 Text Formatter Pro. All rights reserved.</span>
+        <span>© 2026 Text Formatter Pro. All rights reserved.</span>
         <button className="about-close" onClick={closeModal}>
           ×
         </button>
