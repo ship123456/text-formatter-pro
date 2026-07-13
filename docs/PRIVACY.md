@@ -94,9 +94,9 @@ Text Formatter Pro uses Chrome Storage API to store application settings.
 Stored information may include:
 
 - Character limit configuration
-- Auto Save settings
 - Recent text entries
-- Text in text editor
+- Auto-save preference
+- Current editor text
 
 ## Auto Save & Text History Storage
 
@@ -121,14 +121,12 @@ Stored data remains available until:
 
 ## Clipboard Access
 
-Clipboard actions occur only when selected by the user.
+Clipboard actions occur only when initiated by the user.
 
-Clipboard features include:
+Supported operations:
 
-- Copying formatted text
-- Pasting text into the editor
-
-Clipboard content is accessed only when the user manually performs copy or paste actions.
+- Copy formatted text
+- Paste text into the editor
 
 ## Extension Permissions Explanation
 
@@ -139,7 +137,7 @@ Text Formatter Pro uses limited permissions.
 Required for:
 
 - Saving character limit
-- Saving Text of text editor 
+- Saving the current editor text
 - Maintaining recent history
 - Supporting Auto Save functionality
 
@@ -172,11 +170,8 @@ Text Formatter Pro does not use third-party services for:
 Users can manage stored information by:
 
 1. Opening Text Formatter Pro.
-2. Accessing menu options where we have        
-   recent history also Clear All option down below the application 
-3. Clearing history or resetting preferences.
-
-Users can also remove extension data through browser settings.
+2. Open the Recent History menu.
+3. Delete individual history items or use **Clear All** to remove stored history.
 
 ## User Data Control
 
