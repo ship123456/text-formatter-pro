@@ -30,7 +30,7 @@ This guide explains how to install, build, configure, and run Text Formatter Pro
 
 ## Overview
 
-Text Formatter Pro is a React-based Chrome Extension built to provide quick text formatting and cleanup utilities directly inside the browser.
+Text Formatter Pro follows a modular React-based Chrome Extension architecture built to provide quick text formatting and cleanup utilities directly inside the browser.
 
 This document covers installation steps for development, testing, and local extension setup.
 
@@ -42,7 +42,6 @@ Required:
 - Google Chrome or Chromium-based browser
 - Node.js
 - npm package manager
-- Chrome Extension support
 
 ## Prerequisites
 
@@ -151,7 +150,7 @@ The extension icon will appear in the browser toolbar.
 
 ## Verify Installation
 
-## Extension Loaded Successfully
+### Extension Loaded Successfully
 
 ![Extension Loaded](screenshots/extension-loaded-chrome.png)
 
@@ -170,7 +169,6 @@ After installation, users can configure:
 
 - Auto Save preference
 - Character limit value
-- Recent text history management
 
 Settings are saved locally using Chrome Storage.
 
@@ -217,6 +215,7 @@ Check:
 - Correct build folder is selected
 - Browser supports extensions
 - Developer Mode is enabled
+- Project dependencies are installed
 
 For more details:
 
