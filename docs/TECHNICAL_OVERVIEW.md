@@ -58,7 +58,6 @@ The application uses React Context API, utility functions, and Chrome Extension 
 Required environment:
 
 - Chromium-based browser
-- Chrome Extension support
 - Node.js development environment
 - npm package manager
 
@@ -119,9 +118,6 @@ Updated Text / UI State
         |
         v
 Chrome Storage Bridge
-        |
-        v
-Stored Data / Restored Data repace diagram
 ```
 
 ## React Implementation Overview
@@ -177,7 +173,7 @@ Text Processing or Storage Logic
 Updated UI
 ```
 
-## Text Processing Implementation
+## Text Processing Engine
 
 The text processing engine handles multiple formatting and analysis operations.
 
@@ -214,7 +210,7 @@ This allows data to persist even after closing and reopening the extension.
 
 Recent history stores previously used text entries using Chrome Storage API.
 
-Users can restore saved entries, remove individual items, or clear the complete history
+Users can restore saved entries, remove individual items, or clear the entire history
 
 ## Character Limit Handling
 
@@ -250,7 +246,7 @@ Used for:
 
 - Saving editor text
 - Maintaining recent text history
-- Storing auto-save data
+- Storing the auto-save preference
 - Saving character limit settings
 
 ## Browser API Usage
@@ -261,7 +257,7 @@ Used APIs:
 
 - Chrome Storage API for saving editor text, recent history, auto-save data, and character limit settings
 - Clipboard API for copy and paste actions
-- Browser download functionality for text files
+- Browser Download API for text files
 
 Browser API interactions occur based on user actions and application state updates.
 
@@ -285,7 +281,7 @@ Supported:
 
 The application includes input validation to prevent invalid operations.
 
-Validation is applied for text input
+Validation is applied to user input before processing text operations.
 
 ## Performance Considerations
 
@@ -310,8 +306,7 @@ Vite handles:
 
 - Development server
 - Production build generation
-- Bundling React application files for the   
-  Chrome Extension
+- Bundling React application files for the Chrome Extension
 
 
 ## Technical Limitations
