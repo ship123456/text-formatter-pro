@@ -19,7 +19,6 @@ This document explains the internal architecture, application structure, data fl
 - [Component Communication](#component-communication)
 - [Context Architecture](#context-architecture)
 - [State Management Flow](#state-management-flow)
-- [Context API Data Flow](#context-api-data-flow)
 - [Custom Hooks Architecture](#custom-hooks-architecture)
 - [Utility Layer Architecture](#utility-layer-architecture)
 - [Text Processing Architecture](#text-processing-architecture)
@@ -36,7 +35,6 @@ This document explains the internal architecture, application structure, data fl
 - [Modal & Menu Architecture](#modal--menu-architecture)
 - [Clipboard Flow](#clipboard-flow)
 - [File Export Flow](#file-export-flow)
-- [Data Flow](#data-flow)
 - [Data Storage Model](#data-storage-model)
 - [Error Handling Architecture](#error-handling-architecture)
 - [Security & Privacy Architecture](#security--privacy-architecture)
@@ -60,17 +58,9 @@ Custom hooks handle reusable application logic, while utility functions manage t
 Chrome Storage API is used as the persistence layer to store text data, auto-save settings, character limits, and recent history locally inside the browser.
 The overall flow separates UI rendering, state management, business logic, and browser storage integration, making the extension easier to maintain and extend.
 
-
 ## Architectural Overview
 
-The application follows a component-based architecture.
-
-Main layers:
-
-- Presentation Layer
-- State Management Layer
-- Utility Processing Layer
-- Browser Storage Layer
+The following diagram shows the high-level architecture of Text Formatter Pro and how data flows between the user interface, application logic, and browser storage.
 
 ```text
 User
@@ -95,9 +85,7 @@ Browser Local Storage
 ```
 ## State Management
 
-Text Formatter Pro uses React Context API to manage shared application state across components.
-The context handles text content, character limits, auto-save status, and recent text history.
-Components access and update shared data through centralized state functions, keeping the application structure clean and data flow consistent.krde
+Text Formatter Pro uses the React Context API to manage shared application state across components. The centralized context stores the current text, recent text history, character limit, and auto-save preference. Components access and update this shared state through context functions, ensuring consistent data flow throughout the application.
 
 ## Auto Save Workflow
 
@@ -112,7 +100,7 @@ The architecture focuses on:
 - Clear separation of responsibilities
 - Maintainable state management
 - Local-first data handling
-- Simple extension performance
+- Lightweight and efficient performance
 
 ## Application Lifecycle
 
@@ -120,7 +108,7 @@ Application flow:
 
 1. Extension popup opens.
 2. React application initializes.
-3. Stored preferences are loaded.
+3. Previously saved data and user preferences are loaded.
 4. User interacts with text tools.
 5. State updates through Context API.
 6. Required data is saved using Chrome Storage.
@@ -236,19 +224,19 @@ Manages shared application state.
 
 Responsible for:
 
-- Text state
-- History state
-- Preferences(Auto on and off) 
-- Charcacter limit 
+- Current text
+- Recent text history
+- Auto-save preference
+- Character limit
 
 
 ### hooks
 
-Contains reusable logic separated from UI components.
+Contains reusable application logic that is shared across multiple components.
 
 ### utils
 
-Contains independent helper functions for text processing.
+Contains reusable helper functions for text formatting and processing.
 
 ## Component Architecture
 
@@ -264,7 +252,7 @@ Components handle:
 - Triggering user actions
 - Rendering updated state
 
-Components do not directly manage storage operations.
+Components focus on rendering the user interface and handling user interactions.  Components do not directly manage storage operations.
 
 ## Component Communication
 
@@ -290,9 +278,8 @@ Responsibilities:
 
 - Current text value
 - Recent text history
-- Auto Save status
+- Auto Save preference
 - Character limit
-- User actions
 
 ## State Management Flow
 
@@ -311,16 +298,6 @@ State Update
      v
 UI Re-render
 ```
-
-## Context API Data Flow
-
-React Context API provides shared data without prop drilling.
-
-Components consume:
-
-- State values
-- Update functions
-- Preference controls
 
 ## Custom Hooks Architecture
 
@@ -357,7 +334,7 @@ Formatting Function
 Updated Text Output
 ```
 
-Processing happens locally inside the browser.
+All text processing is performed locally within the browser without sending data to external servers.
 
 ## Find & Replace Flow
 
@@ -387,50 +364,55 @@ Includes:
 
 ## Storage Architecture
 
-Storage manages persistent application data.
+Storage manages persistent application data using the Chrome Storage API.
 
-Stored:
+Stored data includes:
 
-- Preferences
-- Auto Save data
-- Recent history
-- TextArea
+- Current editor text
+- Recent text history
+- Auto-save preference
+- Character limit
 
 ## Chrome Storage Architecture
 
-Chrome Storage API provides browser-based persistence.
+Chrome Storage API provides browser-based persistence for application data.
 
-Used for:
+It stores:
 
-- Saving preferences
-- Restoring data after reopening extension
+- Current editor text
+- Recent text history
+- Auto-save preference
+- Character limit
+
+Stored data is restored when the extension is reopened.
 
 ## Build Architecture
 
-Text Formatter Pro uses Vite for development and production builds.
+Text Formatter Pro uses Vite for both development and production builds.
 
 Development:
 
-- Provides local development environment
-- Supports fast updates during coding
+- Fast local development
+- Hot Module Replacement (HMR) for quicker updates
 
-Production build:
+Production:
 
-- Generates optimized extension files
-- Creates the final build folder used for loading the extension in Chrome
+- Generates an optimized production build
+- Produces the extension files that can be loaded into Chrome
 
 ## Manifest V3 Architecture
 
-Text Formatter Pro uses Manifest V3 configuration for Chrome Extension support.
+Text Formatter Pro uses Manifest V3 to configure the Chrome extension.
 
-Manifest configuration defines:
+The manifest defines:
 
 - Extension metadata
 - Required permissions
-- Extension entry points
+- Popup entry point
+- Icons
 - Browser integration settings
 
-Manifest V3 provides the connection between the React application and Chrome Extension environment.
+It serves as the configuration file that enables the React application to run as a Chrome extension.
 
 ## Auto Save Flow
 
@@ -461,28 +443,29 @@ Restore When Needed
 
 ## User Preferences Flow
 
-User settings are updated through Context and stored locally.
+User preferences are updated through the Context API and stored locally using the Chrome Storage API.
 
 ## Preferences Architecture
 
 Preferences include:
 
-- Auto Save configuration
-- Character limit settings
-- Recent history Input 
-- Text in editor 
+- Auto-save preference
+- Character limit
+
+Persisted application data includes:
+
+- Current editor text
+- Recent text history
 
 ## Modal & Menu Architecture
 
-Menus and modals provide access to secondary features:
+Menus and modals provide access to additional application features, including:
 
 - Recent texts
 - Character Limit 
 - About information
 
 ## Clipboard Flow
-
-Clipboard actions occur after user interaction.
 
 Supported:
 
@@ -491,19 +474,7 @@ Supported:
 
 ## File Export Flow
 
-Text content is converted into a downloadable `.txt` file inside the browser.
-
-## Data Flow
-
-```text
-UI
- |
-Context
- |
-Utilities
- |
-Storage
-```
+The current editor content is converted into a downloadable `.txt` file directly within the browser.
 
 ## Data Storage Model
 
@@ -522,16 +493,16 @@ Example:
 
 Errors and validations are handled through:
 
-- Input checks
-- User messages
+- Input validation
+- User-friendly feedback messages
 - Safe fallback behavior
 
 ## Security & Privacy Architecture
 
 Architecture follows local-first processing.
 
-- No external processing servers
-- Local Chrome Storage usage
+- No external data processing
+- Local Chrome Storage for persistence
 - User-controlled data
 
 ## Performance Considerations
@@ -539,9 +510,9 @@ Architecture follows local-first processing.
 Implemented approaches:
 
 - Lightweight components
-- Local processing
+- Local text processing
 - Minimal storage operations
-- Reusable functions
+- Efficient state updates
 
 ## Architectural Decisions
 
