@@ -166,7 +166,7 @@ Added:
 - Clean browser extension interface
 - Organized feature menu
 - Local Chrome Storage integration
-- Responsive popup layout
+- Optimized popup layout
 - Modular React component structure
 
 ### Bug Fixes
