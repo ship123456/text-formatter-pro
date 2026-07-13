@@ -4,6 +4,7 @@ import TextEditor from "./components/TextEditor/TextEditor.jsx";
 import FormatTools from "./components/FormatTools/FormatTools.jsx";
 import FindReplace from "./components/FindReplace/FindReplace.jsx";
 import ActionButtons from "./components/ActionButtons/ActionButtons";
+import AboutModal from "./components/AboutModal/AboutModal.jsx";
 import Footer from "./components/Footer/Footer";
 import OtherTools from "./components/otherTools/otherTools";
 import StatsPanel from "./components/StatsPanel/StatsPanel.jsx";
@@ -13,6 +14,9 @@ function App() {
     <div className="app">
       <Header setActiveModal={setActiveModal}  activeModal={activeModal}
  />
+         {activeModal === "about" && (
+          <AboutModal closeModal={() => setActiveModal(null)} />
+        )}
       <main>
         <TextEditor />
         <FormatTools />
