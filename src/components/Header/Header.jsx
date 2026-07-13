@@ -2,7 +2,7 @@ import "./Header.css";
 import "./Header.css";
 import { useState } from "react";
 import MenuDropdown from "../MenuDropdown/MenuDropdown";
-function Header({ setActiveModal }) {
+function Header({ setActiveModal,activeModal }) {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <header className="header">
@@ -17,7 +17,12 @@ function Header({ setActiveModal }) {
         <button className="menu-btn" onClick={() => setShowMenu(!showMenu)}>
           ⋮
         </button>
-        {showMenu && <MenuDropdown setActiveModal={setActiveModal} />}
+        {showMenu && (
+          <MenuDropdown
+            activeModal={activeModal}
+            setActiveModal={setActiveModal}
+          />
+        )}
       </div>
     </header>
   );

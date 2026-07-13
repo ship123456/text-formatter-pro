@@ -8,10 +8,6 @@ function FindReplace() {
   const [replace, setReplace] = useState("");
   function replaceAll() {
     if (!validateText()) return;
-    if (!find.trim()) {
-      setError("Please enter text to find.");
-      return;
-    }
     saveToRecent();
     const regex = new RegExp(find, "gi");
     const updatedText = text.replace(regex, replace);

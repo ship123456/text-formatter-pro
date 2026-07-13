@@ -125,3 +125,9 @@
   cursor: pointer;
   padding: 0 !important;
 }
+.about-modal {
+  position: absolute;
+  top: 0;
+  right: 230px;   /* menu width + gap */
+  z-index: 10001;
+}

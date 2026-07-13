@@ -2,7 +2,10 @@ import { useContext } from "react";
 import { TextContext } from "../../context/TextContext";
 import { pasteText } from "../../utils/fileUtils";
 import "./MenuDropdown.css";
-function MenuDropdown({ setActiveModal }) {
+import AboutModal from "../AboutModal/AboutModal";
+import RecentTextsModal from "../RecentTextsModal/RecentTextsModal";
+import CharacterLimitModal from "../CharacterLimitModal/CharacterLimitModal";
+function MenuDropdown({ setActiveModal, activeModal }) {
   const {
     undoLastChange,
     updateText,
@@ -29,6 +32,15 @@ function MenuDropdown({ setActiveModal }) {
         </button>
         <button onClick={resetPreferences}>↺ Reset All</button>
         <button onClick={() => setActiveModal("about")}>ℹ About</button>
+        {activeModal === "about" && (
+          <AboutModal closeModal={() => setActiveModal(null)} />
+        )}
+        {activeModal === "recent" && (
+          <RecentTextsModal closeModal={() => setActiveModal(null)} />
+        )}
+        {activeModal === "limit" && (
+          <CharacterLimitModal closeModal={() => setActiveModal(null)} />
+        )}
       </div>
     </>
   );
