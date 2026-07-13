@@ -70,8 +70,6 @@ Try these steps first:
 
 ## Common Issues
 
-Common issues and solutions are listed below.
-
 ## Installation & Build Issues
 
 ### Extension build fails
@@ -219,10 +217,12 @@ Applies to:
 
 #### Undo does not restore text
 
-A previous text change exists
+Check:
 
-Formatting or editing action was performed before using Undo
-Undo restores the last available text state.
+- A previous text change exists.
+- A formatting or editing action was performed before using Undo.
+
+Undo restores the most recent available text state.
 
 #### Auto Save does not restore content
 
@@ -268,7 +268,7 @@ Stored information includes:
 - Auto Save preference
 - Recent text history
 - Character limit settings
-- Text in text editor
+- Current editor text
 
 If issues occur:
 
@@ -316,7 +316,7 @@ chrome://extensions/
 Steps:
 
 1. Open extension menu.
-2. Select Reset Preferences(Auto save on/off)
+2. Select Reset Preferences to restore the default Auto-save and character limit settings.
 3. Restart extension.
 
 ## Known Issues & Workarounds
