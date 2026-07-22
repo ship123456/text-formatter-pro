@@ -157,22 +157,22 @@ text-formatter-pro/
 ├── public/
 │   │
 │   ├── icons/
-│   │   ├── icon16.png
-│   │   ├── icon48.png
-│   │   └── icon128.png
+│   │   ├── icon16.jpeg
+│   │   ├── icon48.jpeg
+│   │   └── icon128.jpeg
 │   │
 │   └── manifest.json
 │
 ├── src/
 │   │
 │   ├── components/
-│   │   └── UI components
+│   │   └── React UI components
 │   │
 │   ├── context/
-│   │   └── TextContext and shared state
+│   │   └── Shared application state
 │   │
 │   ├── hooks/
-│   │   └── Reusable React hooks
+│   │   └── Custom React hooks
 │   │
 │   ├── utils/
 │   │   └── Text processing utilities
@@ -185,22 +185,23 @@ text-formatter-pro/
 ├── docs/
 │   │
 │   ├── screenshots/
+│   │   └── Application screenshots
 │   │
-│   ├── USER_GUIDE.md
-│   ├── INSTALLATION.md
-│   ├── TECHNICAL_OVERVIEW.md
 │   ├── ARCHITECTURE.md
-│   ├── TROUBLESHOOTING.md
+│   ├── INSTALLATION.md
+│   ├── LICENSE
 │   ├── PRIVACY.md
-│   └── RELEASE_NOTES.md
+│   ├── README.md
+│   ├── RELEASE_NOTES.md
+│   ├── TECHNICAL_OVERVIEW.md
+│   ├── TROUBLESHOOTING.md
+│   └── USER_GUIDE.md
 │
 ├── .gitignore
 ├── index.html
 ├── package.json
 ├── package-lock.json
-├── vite.config.js
-├── README.md
-└── LICENSE
+└── vite.config.js
 ```
 ## Folder Responsibilities
 
