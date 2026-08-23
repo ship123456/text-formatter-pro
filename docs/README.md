@@ -21,7 +21,6 @@ The extension combines common text utilities such as case conversion, cleanup op
 - [Browser Compatibility](#browser-compatibility)
 - [Chrome Extension Permissions](#chrome-extension-permissions)
 - [Project Structure](#project-structure)
-- [Documentation](#documentation)
 - [Known Limitations](#known-limitations)
 - [Future Enhancements](#future-enhancements)
 - [License](#license)
@@ -138,7 +137,6 @@ All data remains stored locally in the browser.
 Text Formatter Pro is designed for:
 
 - Developers formatting code-related text
-- Technical writers preparing documentation
 - Content creators editing text
 - Users who frequently clean and transform text data
 
@@ -257,34 +255,6 @@ text-formatter-pro/
 ├── README.md
 └── LICENSE
 ```
-
-## Documentation
-
-Additional documentation is available for setup, usage, architecture, and maintenance:
-
-- [INSTALLATION.md](./INSTALLATION.md)  
-  Step-by-step instructions for installing and running the extension.
-
-- [USER_GUIDE.md](./USER_GUIDE.md)  
-  Complete guide explaining all text formatting features and user workflows.
-
-- [TECHNICAL_OVERVIEW.md](./TECHNICAL_OVERVIEW.md)  
-  Overview of technologies, implementation details, and core functionality.
-
-- [ARCHITECTURE.md](./ARCHITECTURE.md)  
-  Application structure, component organization, and data flow.
-
-- [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)  
-  Common issues and solutions.
-
-- [RELEASE_NOTES.md](./RELEASE_NOTES.md)  
-  Version history, updates, and feature changes.
-
-- [PRIVACY.md](./PRIVACY.md)  
-  Details about data storage, permissions, and privacy.
-
-- [LICENSE](./LICENSE)  
-  Project license information.
 
 ## Known Limitations
 
