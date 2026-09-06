@@ -63,8 +63,11 @@ The production-ready `dist` folder is generated.
 chrome://extensions/
 ```
 7.Enable Developer Mode.
+
 8.Click Load unpacked.
+
 9.Select the generated `dist` folder.
+
 10. Confirm that **Text Formatter Pro** appears in the Chrome Extensions list.
 
 11. The extension is now installed and ready to use.
