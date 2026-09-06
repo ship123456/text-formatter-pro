@@ -39,7 +39,9 @@ Text Formatter Pro does not require a user account and performs text operations 
 6. Use **Download** to save the text as a `.txt` file.
 
 ## Features
+### Three Dots Menu
 
+![Three Dots Menu](screenshots/three-dot-menu.png)
 - Convert text to uppercase
 - Convert text to lowercase
 - Capitalize words
@@ -80,6 +82,7 @@ Use the cleanup tools to:
 - Select **Download** to export the text as a `.txt` file.
 
 ### Manage Recent Texts
+![Recent Texts](screenshots/recent-texts-modal.png)
 
 Open **Recent Texts** to:
 
@@ -92,12 +95,17 @@ Open **Recent Texts** to:
 Open the menu and enable **Auto Save** to automatically save and restore the current text.
 
 ### Change Character Limit
+![Character Limit Settings](screenshots/character-limit.png)
 
 Open **Character Limit** from the menu to customize the maximum text length allowed in the editor.
 
 ### Reset Preferences
 
 Open **Reset Preferences** and select **Reset All** to restore the default application settings.
+
+### About Section
+
+![About Section](screenshots/about-modal.png)
 
 ## Troubleshooting
 
