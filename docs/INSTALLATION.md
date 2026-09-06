@@ -58,16 +58,16 @@ npm run build
 ```
 
 The production-ready `dist` folder is generated.
-6. Open Google Chrome and navigate to:
+3. Open Google Chrome and navigate to:
  ```bash
 chrome://extensions/
 ```
-7.Enable Developer Mode.
+4.Enable Developer Mode.
 
-8.Click Load unpacked.
+5.Click Load unpacked.
 
-9.Select the generated `dist` folder.
+6.Select the generated `dist` folder.
 
-10. Confirm that **Text Formatter Pro** appears in the Chrome Extensions list.
+7. Confirm that **Text Formatter Pro** appears in the Chrome Extensions list.
 
-11. The extension is now installed and ready to use.
+8. The extension is now installed and ready to use.
