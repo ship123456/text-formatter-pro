@@ -44,3 +44,19 @@ npm run build
 
 Then select the generated dist folder when using Load unpacked in Chrome.
 
+### Extension Loading & Activation Issues
+
+**Problem:** Text Formatter Pro does not appear in Chrome or does not load correctly.
+
+**Cause:** The extension may be disabled or the wrong folder may have been selected.
+
+**Solution:**
+
+1. Open:
+
+```text
+chrome://extensions/
+```
+2.Enable Developer Mode.
+3.Select the generated dist folder.
+4.Click Reload on Text Formatter Pro.
