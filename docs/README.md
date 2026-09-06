@@ -1,72 +1,37 @@
 # Text Formatter Pro
 
+![Text Formatter Pro Interface](screenshots/main-interface.png)
+
+### Demo in Chrome
+
+![Demo in Chrome](screenshots/formatting-demo.png)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Limitations](#limitations)
+
+## Overview
+
 Text Formatter Pro is a React-based Chrome Extension designed to simplify everyday text editing workflows by providing fast formatting, cleanup, analysis, and text management tools directly inside the browser.
 
 The extension combines common text utilities such as case conversion, cleanup operations, find and replace, statistics tracking, history management, and local persistence into a lightweight productivity tool.
 
-## Table of Contents
-
-- [Version Information](#version-information)
-- [Overview](#overview)
-- [Highlights](#highlights)
-- [Screenshots](#screenshots)
-- [Key Features](#key-features)
-- [Technology Stack](#technology-stack)
-- [Architecture Overview](#architecture-overview)
-- [Data Storage](#data-storage)
-- [Target Users](#target-users)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Browser Compatibility](#browser-compatibility)
-- [Chrome Extension Permissions](#chrome-extension-permissions)
-- [Project Structure](#project-structure)
-- [Known Limitations](#known-limitations)
-- [Future Enhancements](#future-enhancements)
-- [License](#license)
-
-## Version Information
-
-**Current Version:** 1.0.0  
-**Release Status:** Stable Release  
-**Platform:** Chrome Extension  
-**Manifest Version:** Manifest V3
-
-## Overview
-
-Text Formatter Pro provides a collection of browser-based text utilities designed to improve productivity during writing, documentation, and development workflows.
-
-The extension performs all formatting operations locally and provides additional tools such as history management, clipboard support, file export, and customizable preferences.
-
 The goal of the project is to deliver a fast, privacy-focused, and easy-to-use text processing experience.
 
-## Highlights
+## Features
 
-- Browser-based text formatting without external tools
-- Real-time text statistics and analysis
-- Persistent local storage using Chrome Storage API
-- Recent text recovery support
-- Customizable text limits
-- Clipboard integration
-- Lightweight React component architecture
-- Privacy-focused local data handling
-- Local text processing without external servers
-
-## Screenshots
-
-### Text Formatter Pro Interface
-
-![Text Formatter Pro Interface](screenshots/main-interface.png)
-
-### Demo in Chrome 
-
-![Demo in Chrome](screenshots/formatting-demo.png)
-
-## Key Features
+Text Formatter Pro provides the following features:
 
 - Convert text to uppercase
 - Convert text to lowercase
-- Capitalize words 
+- Capitalize words
 - Remove extra spaces
 - Remove duplicate lines
 - Trim blank lines
@@ -76,24 +41,15 @@ The goal of the project is to deliver a fast, privacy-focused, and easy-to-use t
 - Copy formatted text
 - Download text as a `.txt` file
 - Clear editor content
-
-- View text statistics:
-  - Word count
-  - Character count
-  - Line count
-  - Reading time
-
-- Recent text history
-  - Restore previously used text
-  - Delete individual history items
-  - Clear all history
-
-- Auto-save functionality
-  - Enable or disable auto-save
-  - Automatically restore saved text
-  - Character limit customization
-  - Recent Texts customization
-  - Restores the previously saved editor content automatically.
+- View text statistics such as word count, character count, line count, and reading time
+- Manage recent text history
+- Restore previously used text
+- Delete individual history items
+- Clear all history
+- Enable or disable auto-save
+- Automatically restore saved text
+- Customize character limit
+- Customize Recent Texts settings
 
 ## Technology Stack
 
@@ -106,126 +62,6 @@ The goal of the project is to deliver a fast, privacy-focused, and easy-to-use t
 | Chrome Storage API | Local data persistence |
 | Manifest V3 | Extension configuration |
 | Vite | Development and build tooling |
-
-## Architecture Overview
-
-Text Formatter Pro follows a modular React architecture.
-
-- Components handle independent UI sections
-- Context API manages shared application state
-- Custom hooks separate reusable logic
-- Utility functions handle text transformations
-- Chrome Storage API manages persistence
-
-This separation keeps formatting logic, storage handling, and user interface code maintainable.
-
-## Data Storage
-
-Text Formatter Pro stores user preferences and recent text history using Chrome Storage API.
-
-Stored data includes:
-
-- Recent text entries
-- Auto-save preferences(on/off)
-- Character limit
-- Editor text
-
-All data remains stored locally in the browser.
-
-## Target Users
-
-Text Formatter Pro is designed for:
-
-- Developers formatting code-related text
-- Content creators editing text
-- Users who frequently clean and transform text data
-
-## Quick Start
-
-Clone the repository:
-
-```bash
-git clone https://github.com/ship123456/text-formatter-pro.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd text-formatter-pro
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start development server:
-
-```bash
-npm run dev
-```
-
-## Installation
-
-1. Build the extension:
-
-```bash
-npm run build
-```
-
-2. Open Chrome browser.
-
-3. Navigate to:
-
-```
-chrome://extensions/
-```
-
-4. Enable **Developer Mode**.
-
-5. Click **Load unpacked**.
-
-6. Select the generated build folder.
-
-The extension will now be available in Chrome.
-
-## Usage
-
-1. Open Text Formatter Pro from the browser toolbar.
-2. Enter or paste text into the editor.
-3. Select a formatting option.
-4. Review text statistics.
-5. Copy or download the final text.
-
-Additional tools are available from the menu including recent texts, auto-save.
-
-## Browser Compatibility
-
-| Browser | Support |
-|---|---|
-| Google Chrome | Supported |
-| Microsoft Edge | Supported |
-| Brave | Supported |
-
-## Chrome Extension Permissions
-
-The extension uses:
-
-### Storage Permission
-
-Used for:
-
-- Saving recent texts
-- Auto-save functionality
-- Character limit settings
-
-### Clipboard Permission
-
-- Reading text from the clipboard for the Paste feature
-- Writing formatted text to the clipboard for the Copy feature
-
-No personal data is collected or sent externally.
 
 ## Project Structure
 
@@ -256,21 +92,47 @@ text-formatter-pro/
 └── LICENSE
 ```
 
-## Known Limitations
+## Prerequisites
+
+Before using Text Formatter Pro, ensure you have:
+
+- Google Chrome or a Chromium-based browser
+- Node.js installed
+- npm package manager
+- Git version control
+
+## Installation
+
+1. Build the extension:
+
+```bash
+npm run build
+```
+2. Open Google Chrome
+3. Navigate to:
+
+```bash
+chrome://extensions/
+```
+4. Enable Developer Mode
+5. Click Load unpacked
+6. Select the generated dist folder
+
+## Usage
+
+1. Open **Text Formatter Pro** from the browser toolbar.
+2. Enter or paste text into the editor.
+3. Select a formatting option.
+4. Review the text statistics.
+5. Copy or download the formatted text.
+
+Additional tools are available from the menu, including **Recent Texts** and **Auto Save**.
+
+## Limitations
 
 - Currently supports Chromium-based browsers only.
 - Requires browser permissions for storage and clipboard features.
 - Works only as a browser extension (no standalone desktop/mobile version).
 - Offline processing only; no cloud synchronization.
 
-## Future Enhancements
 
-- Support for additional export formats
-- Advanced formatting options
-- Keyboard shortcut support
-- Custom themes
-- Optional cloud synchronization
-
-## License
-
-This project is licensed under the terms provided in the LICENSE file.
