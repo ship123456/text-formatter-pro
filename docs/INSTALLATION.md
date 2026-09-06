@@ -71,3 +71,29 @@ chrome://extensions/
 7. Confirm that **Text Formatter Pro** appears in the Chrome Extensions list.
 
 8. The extension is now installed and ready to use.
+
+## Verification
+
+1. Open **Text Formatter Pro** from the Chrome Extensions toolbar.
+2. Verify that the extension popup opens correctly.
+3. Check that the text editor is displayed.
+4. Verify that the formatting buttons work.
+5. Check that the menu options are accessible.
+6. Verify that text statistics update correctly.
+
+![Extension Loaded](screenshots/extension-loaded-chrome.png)
+
+## Troubleshooting
+
+If the extension does not work as expected, check the following:
+
+- Ensure the correct `dist` folder is selected.
+- Verify that **Developer Mode** is enabled in Chrome.
+- Make sure the project dependencies are installed.
+- Rebuild the extension using:
+
+```bash
+npm run build
+```
+
+Reload Text Formatter Pro from chrome://extensions/.
