@@ -19,11 +19,14 @@
 
 ## Overview
 
-Text Formatter Pro is a React-based Chrome Extension designed to simplify everyday text editing workflows by providing fast formatting, cleanup, analysis, and text management tools directly inside the browser.
+Text Formatter Pro is a React based 
+Chrome Extension which allows to format, cleanup, perform analysis to text inside the browser. 
 
-The extension combines common text utilities such as case conversion, cleanup operations, find and replace, statistics tracking, history management, and local persistence into a lightweight productivity tool.
+It has features - case conversion, cleanup functions,find and replace, 
+history management and statistics tracking. 
 
-The goal of the project is to deliver a fast, privacy-focused, and easy-to-use text processing experience.
+The goal is to deliver fast, easy to use 
+text formatter in the browser. 
 
 ## Features
 
@@ -94,7 +97,7 @@ text-formatter-pro/
 
 ## Prerequisites
 
-Before using Text Formatter Pro, ensure you have:
+To use Text Formatter Pro,you must have following:
 
 - Google Chrome or a Chromium-based browser
 - Node.js installed
@@ -103,28 +106,46 @@ Before using Text Formatter Pro, ensure you have:
 
 ## Installation
 
-1. Build the extension:
+To install the extension follow below steps. 
+
+1.Clone the repository. 
+
+```
+git clone repo-name
+```
+2.Navigate to folder
+
+```
+cd project-name
+```
+3.Install the required dependencies. 
+
+```
+npm install 
+```
+4.Build the extension:
 
 ```bash
 npm run build
 ```
-2. Open Google Chrome
-3. Navigate to:
+5. Open Google Chrome
+6. Navigate to:
 
 ```bash
 chrome://extensions/
 ```
-4. Enable Developer Mode
-5. Click Load unpacked
-6. Select the generated dist folder
+7. Enable Developer Mode
+8. Click Load unpacked
+9. Select the generated dist folder
 
 ## Usage
 
-1. Open **Text Formatter Pro** from the browser toolbar.
-2. Enter or paste text into the editor.
-3. Select a formatting option.
-4. Review the text statistics.
-5. Copy or download the formatted text.
+1.Open the extension from browser Toolbar.
+2.Type the text or paste on textarea if extension.
+3.Select a formatting option.
+4.Review the text statistics.
+5.Copy or download the formatted text.
+6.Use undo option,put character limit, read about me. 
 
 Additional tools are available from the menu, including **Recent Texts** and **Auto Save**.
 
@@ -133,6 +154,6 @@ Additional tools are available from the menu, including **Recent Texts** and **A
 - Currently supports Chromium-based browsers only.
 - Requires browser permissions for storage and clipboard features.
 - Works only as a browser extension (no standalone desktop/mobile version).
-- Offline processing only; no cloud synchronization.
+- No cloud synchronization.
 
 
