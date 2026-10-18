@@ -7,23 +7,21 @@
 - [How to Use](#how-to-use)
 - [Features](#features)
 - [Common Tasks](#common-tasks)
-- [Troubleshooting](#troubleshooting)
-- [FAQ](#faq)
 
 ## Overview
 
-Text Formatter Pro is a React-based Chrome Extension designed to simplify everyday text editing workflows by providing fast formatting, cleanup, analysis, and text management tools directly inside the browser.
+Text Formatter Pro is a React-based Chrome extension which is used to simplify text editing workflows such as formatting, doing cleanup and provid text management tools. 
 
-The extension combines common text utilities such as case conversion, cleanup operations, find and replace, statistics tracking, history management, and local persistence into a lightweight productivity tool.
+The extension provides many features - case conversion, cleanup operations, find and replace, statistics tracking and history management with local Storage. 
 
 ## Getting Started
 
 Text Formatter Pro requires:
 
 - Google Chrome or Chromium-based browser
-- Local browser storage access
+- Local browser storage access. 
 
-Text Formatter Pro does not require a user account and performs text operations locally inside the browser.
+It does not require a user account and performs text operations locally inside the browser.
 
 ### Main Interface
 
@@ -31,11 +29,16 @@ Text Formatter Pro does not require a user account and performs text operations 
 
 ## How to Use
 
-1. Open Text Formatter Pro from the browser toolbar.
-2. Enter or paste text into the editor.
+1. Open the extension from toolbar. 
+
+2. Type or paste the text to edit.
+
 3. Select a formatting or cleanup option.
+
 4. Review the updated text and statistics.
+
 5. Use **Copy** to copy the formatted text.
+
 6. Use **Download** to save the text as a `.txt` file.
 
 ## Features
@@ -107,8 +110,3 @@ Open **Reset Preferences** and select **Reset All** to restore the default appli
 
 ![About Section](screenshots/about-modal.png)
 
-## Troubleshooting
-
-For common problems and solutions, see the troubleshooting guide:
-
-[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
