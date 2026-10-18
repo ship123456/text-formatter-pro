@@ -129,13 +129,16 @@ npm install
 npm run build
 ```
 5.Open Google Chrome
+
 6.Navigate to:
 
 ```bash
 chrome://extensions/
 ```
 7.Enable Developer Mode
+
 8.Click Load unpacked
+
 9.Select the generated dist folder
 
 ## Usage
