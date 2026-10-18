@@ -6,34 +6,23 @@
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Verification](#verification)
-- [Troubleshooting](#troubleshooting)
 
 ## Overview
 
-Text Formatter Pro is a React-based Chrome Extension that provides text formatting and cleanup utilities directly inside the browser.
-
-This document explains the prerequisites, installation process, verification steps, and troubleshooting for setting up the extension locally.
-
+Text Formatter Pro is a React-based Chrome Extension which gives formatting and cleanup utilities directly. 
+ 
 ## Prerequisites
 
-Before installing Text Formatter Pro, ensure the following are available:
+Before installing,mmake sure following are available on your machine:
 
 - Git
 - Google Chrome or a Chromium-based browser
 - Node.js
 - npm package manager
 
-Verify the installations using:
-
-```bash
-git --version
-node --version
-npm --version
-```
-
 ## Installation
 
-Text Formatter Pro can be installed locally as a Chrome Extension using the production build.
+The Extension can be installed with the following steps. 
 
 ### Install from VSIX Package
 
@@ -74,26 +63,17 @@ chrome://extensions/
 
 ## Verification
 
-1. Open **Text Formatter Pro** from the Chrome Extensions toolbar.
-2. Verify that the extension popup opens correctly.
-3. Check that the text editor is displayed.
-4. Verify that the formatting buttons work.
-5. Check that the menu options are accessible.
-6. Verify that text statistics update correctly.
+1.Open **Text Formatter Pro** from toolbar.
+
+2.Verify it popup when clicked. 
+
+3.Check if text editor is displayed. 
+
+4.Verify if functionality is working correctly. 
+
+5.Check if all options are accessible. 
+
+6.Verify statistics are updated correctly. 
 
 ![Extension Loaded](screenshots/extension-loaded-chrome.png)
 
-## Troubleshooting
-
-If the extension does not work as expected, check the following:
-
-- Ensure the correct `dist` folder is selected.
-- Verify that **Developer Mode** is enabled in Chrome.
-- Make sure the project dependencies are installed.
-- Rebuild the extension using:
-
-```bash
-npm run build
-```
-
-Reload Text Formatter Pro from chrome://extensions/.
