@@ -13,7 +13,7 @@
 
 ## Overview
 
-Text Formatter Pro runs inside the browser and performs text formatting operations locally.
+Text Formatter Pro is extension which runs inside browser and perform text editing operations. 
 
 Common issues are usually related to:
 
