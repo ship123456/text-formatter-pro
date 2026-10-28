@@ -72,29 +72,6 @@ chrome://extensions/
 - For statistics issues, edit the text again to trigger an update.
 - For clipboard issues, verify that clipboard content is available.
 
-### Permission Issues
-
-**Problem:** Text Formatter Pro features that require browser permissions are not working.
-
-**Cause:** The required `storage` permission may not be available or enabled.
-
-**Solution:**
-
-- Check the extension permissions in Chrome.
-- Verify that the `storage` permission is available.
-- Reload the extension after updating permissions.
-
-### Browser Compatibility Issues
-
-**Problem:** Text Formatter Pro does not work correctly in the browser.
-
-**Cause:** The browser may not be supported or may not be up to date.
-
-**Solution:**
-
-- Use Google Chrome, Microsoft Edge, or Brave.
-- Update the browser to the latest version.
-- Reload the extension after updating the browser.
 
 ## FAQ
 
