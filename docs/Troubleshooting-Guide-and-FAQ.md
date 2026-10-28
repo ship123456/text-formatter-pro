@@ -15,13 +15,7 @@
 
 Text Formatter Pro is extension which runs inside browser and perform text editing operations. 
 
-Common issues are usually related to:
-
-- Extension installation
-- Browser permissions
-- Local storage settings
-- Browser cache
-- Extension configuration
+Common issues are
 
 ### Installation & Build Issues
 
