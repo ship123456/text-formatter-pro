@@ -7,8 +7,7 @@
   - [Installation & Build Issues](#installation--build-issues)
   - [Extension Loading & Activation Issues](#extension-loading--activation-issues)
   - [Feature-Specific Issues](#feature-specific-issues)
-  - [Permission Issues](#permission-issues)
-  - [Browser Compatibility Issues](#browser-compatibility-issues)
+  
 - [FAQ](#faq)
 
 ## Overview
